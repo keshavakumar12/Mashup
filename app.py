@@ -13,7 +13,9 @@ from dotenv import load_dotenv
 from mashup_core import create_mashup, is_valid_email
 
 
-load_dotenv()
+
+load_dotenv(override=False)
+
 
 ROLL_NUMBER = "102303982"
 
