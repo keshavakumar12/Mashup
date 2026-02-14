@@ -52,3 +52,5 @@ streamlit run app.py --server.port 5000
 - Temporary files are stored under your system temp directory and cleaned automatically.
 - If YouTube blocks or limits downloads for some results, the program stops with a clear message; try reducing the number of videos or using a different singer.
 - Windows: downloads are retried with unlock waits; if a transient lock appears, just re-run.
+# DEPLOYED LINK
+https://mashup-s0ye.onrender.com/
