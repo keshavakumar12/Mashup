@@ -25,7 +25,6 @@ log = logging.getLogger(__name__)
 
 
 class MashupError(Exception):
-    """Custom exception for mashup-related failures."""
 
 
 def _coerce_positive_int(value: str, name: str) -> int:
@@ -48,10 +47,6 @@ def validate_inputs(singer: str, n_videos: int, clip_seconds: int) -> None:
 
 
 def setup_audio_backend() -> None:
-    """
-    Ensure ffmpeg is available. imageio_ffmpeg will fetch a local
-    ffmpeg binary if one is not already available on the system PATH.
-    """
     try:
         ffmpeg_path = imageio_ffmpeg.get_ffmpeg_exe()
         os.environ.setdefault("FFMPEG_BINARY", ffmpeg_path)
