@@ -25,6 +25,7 @@ log = logging.getLogger(__name__)
 
 
 class MashupError(Exception):
+    pass
 
 
 def _coerce_positive_int(value: str, name: str) -> int:
@@ -133,8 +134,6 @@ def download_audio_from_search(
         except Exception as exc:  # continue on individual download failures
             log.warning("Failed to download %s: %s", url, exc)
             continue
-
-        # prefer the extracted mp3; fallback to any file with the id
         matched = list(workdir.glob(f"{video_id}.mp3"))
         if not matched:
             matched = list(workdir.glob(f"{video_id}.*"))
